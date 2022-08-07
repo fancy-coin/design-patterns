@@ -3,3 +3,4 @@ Console.WriteLine("Start testing");
 Test.TestSingleton();
 Test.TestStrategy();
 Test.TestResponsibilityChain();
+Test.TestSimpleFactory();
