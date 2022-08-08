@@ -1,3 +1,5 @@
+namespace ResponsibilityChain;
+
 public class Chain{
     protected Chain? next{get;set;}
 
@@ -42,14 +44,12 @@ public class CTO : Chain{
     }
 }
 
-public partial class Test{
+public class Test{
     public static void TestResponsibilityChain(){
-        Console.WriteLine("****** Start Responsibility Chain Test ******");
         var dev = new Dev();
         dev.SetNext(new DevManager()).SetNext(new CTO());
         dev.Process("common bug");
         dev.Process("serious bug");
         dev.Process("hard bug");
-        Console.WriteLine();
     }
 }

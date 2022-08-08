@@ -1,3 +1,5 @@
+namespace SimpleFactory;
+
 public interface ILabel{
     public void Print();
 }
@@ -26,7 +28,7 @@ public class PlainLabel : ILabel{
     }
 }
 public class Factory{
-    public ILabel PrintLabel(string type){
+    public ILabel Get(string type){
         ILabel label = type switch{
             "dhl" => new DHL(),
             "tnt" => new TNT(),
@@ -37,15 +39,13 @@ public class Factory{
     }
 }
 
-public partial class Test{
+public class Test{
     public static void TestSimpleFactory(){
-        Console.WriteLine("****** Start Simple Factory Test ******");
         var factory = new Factory();
-        factory.PrintLabel("dhl").Print();
-        factory.PrintLabel("ups").Print();
-        factory.PrintLabel("tnt").Print();
-        factory.PrintLabel("jppost").Print();
-        Console.WriteLine();
+        factory.Get("dhl").Print();
+        factory.Get("ups").Print();
+        factory.Get("tnt").Print();
+        factory.Get("jppost").Print();
     }
 }
 

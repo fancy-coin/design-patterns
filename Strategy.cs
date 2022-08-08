@@ -1,3 +1,5 @@
+namespace Strategy;
+
 public interface ITravel{
     void Go();
 }
@@ -31,9 +33,8 @@ public class Client{
     }
 }
 
-public partial class Test{
+public class Test{
     public static void TestStrategy(){
-        Console.WriteLine("****** Start Strategy Test ******");
         var car = new Car();
         var client = new Client(car);
         client.Travel();
@@ -43,7 +44,6 @@ public partial class Test{
         var plane = new Plane();
         client = new Client(plane);
         client.Travel();
-        Console.WriteLine();
     }
 }
 

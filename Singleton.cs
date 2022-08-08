@@ -1,3 +1,5 @@
+namespace Singleton;
+
 public class Sun{
     private static Sun instance;
     public static object obj = new object();
@@ -16,12 +18,10 @@ public class Sun{
     }
 }
 
-public partial class Test{
+public class Test{
     public static void TestSingleton(){
-        Console.WriteLine("****** Start Singleton Test ******");
         var sun1 = Sun.Get();
         var sun2 = Sun.Get();
         Console.WriteLine("Sun1 {0} Sun2", sun1 == sun2 ? "=" : "!="); 
-        Console.WriteLine();
     }
 }
