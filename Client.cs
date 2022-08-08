@@ -5,7 +5,8 @@ public class Client{
         ExecutePattern("FactoryMethod", FactoryMethod.Test.TestFactoryMethod);
         ExecutePattern("AbstractFactory", AbstractFactory.Test.TestAbstractFactory);
         ExecutePattern("ResponsibilityChain", ResponsibilityChain.Test.TestResponsibilityChain);
-        ExecutePattern("Strategy", Strategy.Test.TestStrategy);        
+        ExecutePattern("Strategy", Strategy.Test.TestStrategy);  
+        ExecutePattern("Prototype", Prototype.Test.TestPrototype);      
     }
 
     private static void ExecutePattern(string patternName, Action pattern){
