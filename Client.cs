@@ -3,6 +3,7 @@ public class Client{
         ExecutePattern("Singleton", Singleton.Test.TestSingleton);
         ExecutePattern("SimpleFactory", SimpleFactory.Test.TestSimpleFactory);
         ExecutePattern("FactoryMethod", FactoryMethod.Test.TestFactoryMethod);
+        ExecutePattern("AbstractFactory", AbstractFactory.Test.TestAbstractFactory);
         ExecutePattern("ResponsibilityChain", ResponsibilityChain.Test.TestResponsibilityChain);
         ExecutePattern("Strategy", Strategy.Test.TestStrategy);        
     }
