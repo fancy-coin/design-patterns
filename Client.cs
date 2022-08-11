@@ -8,7 +8,8 @@ public class Client{
         ExecutePattern("Strategy", Strategy.Test.TestStrategy);  
         ExecutePattern("Prototype", Prototype.Test.TestPrototype);  
         ExecutePattern("Flyweight", Flyweight.Test.TestFlyweight);
-        ExecutePattern("Facade", Facede.Test.TestFacade);    
+        ExecutePattern("Facade", Facede.Test.TestFacade); 
+        ExecutePattern("Adapter", Adapter.Test.TestAdapter);   
     }
 
     private static void ExecutePattern(string patternName, Action pattern){

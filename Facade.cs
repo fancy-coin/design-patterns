@@ -6,6 +6,10 @@ public class Order{
     public int Qty {get;set;}
     public string ReceiverEmail {get;set;}
     public string Receiver {get;set;}
+
+    public string ToString(){
+        return $"Order details --  OrderId: {Id.ToString()}, Item: {Item}, Qty: {Qty}, Email: {ReceiverEmail}, Receiver: {Receiver}";
+    }
 }
 
 //mock database
@@ -20,6 +24,7 @@ public class Database{
     };
     
     public static Order Get(int Id){
+        Console.WriteLine("Now calling database to fetch the order");
         Console.WriteLine($"Try to get order {Id} from database");
         return orders.FirstOrDefault(o=>o.Id == Id);
     }
@@ -28,11 +33,13 @@ public class Database{
 //order validation system
 public class OrderValidator{
     public static bool ValidateOrder(Order order){
+        Console.WriteLine("Now calling validating system to validate the order");
         if(order == null){
             Console.WriteLine("Order doesn't exist");
             return false;
         }        
 
+        Console.WriteLine(order.ToString());
         if(string.IsNullOrWhiteSpace(order.ReceiverEmail)){
             Console.WriteLine("Receiver email can't be null or empty");
             return false;
@@ -60,15 +67,15 @@ public class OrderValidator{
 //order print system
 public class Label{
     public static void PrintLabel(Order order){
-        string label = $"Order{order.Id} , Receiver: {order.Receiver} Item: {order.Item}, Qty: {order.Qty}, Email: {order.ReceiverEmail}";
-        Console.WriteLine($"This is label for {order.Receiver}");
-        Console.WriteLine(label);
+        Console.WriteLine("Now calling printing system to generate label");
+        Console.WriteLine($"Receiver: {order.Receiver}    Tracking: {new Random().NextInt64(50000000,90000000)} ");
     }
 }
 
 //facade interface api
 public class PrintService{
     public void PrintOrder(int Id){
+        Console.WriteLine("Now start print order process...");
         var order = Database.Get(Id);
         if(OrderValidator.ValidateOrder(order)){
             Label.PrintLabel(order);
