@@ -9,7 +9,8 @@ public class Client{
         ExecutePattern("Prototype", Prototype.Test.TestPrototype);  
         ExecutePattern("Flyweight", Flyweight.Test.TestFlyweight);
         ExecutePattern("Facade", Facede.Test.TestFacade); 
-        ExecutePattern("Adapter", Adapter.Test.TestAdapter);   
+        ExecutePattern("Adapter", Adapter.Test.TestAdapter);
+        ExecutePattern("Template", Template.Test.TestTemplate);   
     }
 
     private static void ExecutePattern(string patternName, Action pattern){
