@@ -11,6 +11,7 @@ public class Client{
         ExecutePattern("Facade", Facede.Test.TestFacade); 
         ExecutePattern("Adapter", Adapter.Test.TestAdapter);
         ExecutePattern("Template", Template.Test.TestTemplate);   
+        ExecutePattern("Composite", Composite.Test.TestComposite);   
     }
 
     private static void ExecutePattern(string patternName, Action pattern){
