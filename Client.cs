@@ -13,10 +13,13 @@ public class Client{
         ExecutePattern("Template", Template.Test.TestTemplate);   
         ExecutePattern("Composite", Composite.Test.TestComposite);   
         ExecutePattern("Builder", Builder.Test.TestBuilder);
+        ExecutePattern("Proxy", Proxy.Test.TestProxy);
     }
 
     private static void ExecutePattern(string patternName, Action pattern){
-        Console.WriteLine($"****** Start {patternName} Test ******");
+        Console.WriteLine($"###########################################");
+        Console.WriteLine($"          Start {patternName} Test         ");
+        Console.WriteLine($"###########################################");
         pattern();
         Console.WriteLine();
     }
