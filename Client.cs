@@ -15,6 +15,7 @@ public class Client{
         ExecutePattern("Builder", Builder.Test.TestBuilder);
         ExecutePattern("Proxy", Proxy.Test.TestProxy);
         ExecutePattern("Decorator", Decorator.Test.TestDecorateor);
+        ExecutePattern("State", State.Test.TestState);
     }
 
     private static void ExecutePattern(string patternName, Action pattern){
