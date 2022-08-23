@@ -16,6 +16,7 @@ public class Client{
         ExecutePattern("Proxy", Proxy.Test.TestProxy);
         ExecutePattern("Decorator", Decorator.Test.TestDecorateor);
         ExecutePattern("State", State.Test.TestState);
+        ExecutePattern("Mediator", Mediator.Test.TestMediator);
     }
 
     private static void ExecutePattern(string patternName, Action pattern){
