@@ -18,6 +18,7 @@ public class Client{
         ExecutePattern("State", State.Test.TestState);
         ExecutePattern("Mediator", Mediator.Test.TestMediator);
         ExecutePattern("Command", Command.Test.TestCommand);
+        ExecutePattern("Iterator", Iterator.Test.TestIterator);
     }
 
     private static void ExecutePattern(string patternName, Action pattern){
