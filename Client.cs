@@ -1,5 +1,6 @@
 public class Client{
     public static void TestAllPatterns(){
+        /*
         ExecutePattern("Singleton", Singleton.Test.TestSingleton);
         ExecutePattern("SimpleFactory", SimpleFactory.Test.TestSimpleFactory);
         ExecutePattern("FactoryMethod", FactoryMethod.Test.TestFactoryMethod);
@@ -19,7 +20,8 @@ public class Client{
         ExecutePattern("Mediator", Mediator.Test.TestMediator);
         ExecutePattern("Command", Command.Test.TestCommand);
         ExecutePattern("Iterator", Iterator.Test.TestIterator);
-        ExecutePattern("Vistor", Vistor.Test.TestVistor);
+        ExecutePattern("Vistor", Vistor.Test.TestVistor);*/
+        ExecutePattern("Memento", Memento.Test.TestMemento);
     }
 
     private static void ExecutePattern(string patternName, Action pattern){
